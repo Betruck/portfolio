@@ -31,3 +31,56 @@ videoLightbox.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeVideoLightbox();
 });
+
+// Scroll-triggered reveal animations
+const revealTargets = document.querySelectorAll(
+  '.card, .timeline-item, .skill-category, .cyber-card, .edu-list li, .section-head'
+);
+revealTargets.forEach(el => el.classList.add('reveal'));
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      entry.target.querySelectorAll('.reveal-tag').forEach(tag => tag.classList.add('visible'));
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+revealTargets.forEach(el => revealObserver.observe(el));
+
+// Staggered animation for project tags and skill-list items
+document.querySelectorAll('.tags, .skill-list').forEach(group => {
+  group.querySelectorAll('span, li').forEach((item, i) => {
+    item.classList.add('reveal-tag');
+    item.style.transitionDelay = `${i * 0.05}s`;
+  });
+});
+
+// Project filter
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('#projects .card');
+const projectGrids = document.querySelectorAll('#projects .grid');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+
+    projectCards.forEach(card => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('hidden', !match);
+    });
+
+    projectGrids.forEach(grid => {
+      const hasVisible = grid.querySelectorAll('.card:not(.hidden)').length > 0;
+      grid.classList.toggle('hidden', !hasVisible);
+      const subHead = grid.previousElementSibling;
+      if (subHead && subHead.classList.contains('subsection-head')) {
+        subHead.classList.toggle('hidden', !hasVisible);
+      }
+    });
+  });
+});

@@ -816,3 +816,30 @@ a:focus-visible, button:focus-visible{
   outline:2px solid var(--hud);
   outline-offset:2px;
 }
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+.reveal-tag{opacity:0;transform:translateY(10px) scale(.92);transition:opacity .4s ease, transform .4s ease;}
+.reveal-tag.visible{opacity:1;transform:translateY(0) scale(1);}
+
+/* Interactive hover lift for tags and skill items */
+.tags span, .skill-list li{transition:transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;}
+.tags span:hover, .skill-list li:hover{
+  transform:translateY(-3px);
+  background:var(--accent);
+  color:#7AE2CF;
+  border-color:var(--accent);
+  cursor:default;
+}
+
+.filter-bar{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem;}
+.filter-btn{
+  font-family:var(--mono, monospace);font-size:.78rem;letter-spacing:.03em;
+  padding:.5rem 1rem;border:1px solid var(--line);background:transparent;color:var(--muted);
+  border-radius:4px;cursor:pointer;transition:all .2s ease;
+}
+.filter-btn:hover{border-color:var(--accent);color:var(--text);}
+.filter-btn.active{background:var(--accent);color:#FFF449;border-color:var(--accent);}
+.card.hidden, .grid.hidden, .subsection-head.hidden{display:none;}

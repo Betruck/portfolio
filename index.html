@@ -115,26 +115,33 @@
       <p class="section-note">Thermofluid systems, manufacturing,<br>and applied engineering research</p>
     </div>
 
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="energy">Energy Systems</button>
+      <button class="filter-btn" data-filter="sustainable">Sustainable Design</button>
+      <button class="filter-btn" data-filter="simulation">Design &amp; Simulation</button>
+    </div>
+
     <div class="subsection-head">
       <span class="num">A</span>
       <h3>Energy Systems &amp; Thermofluids</h3>
       <div class="rule"></div>
     </div>
     <div class="grid">
-      <div class="card">
+      <div class="card" data-category="energy">
         <div class="thumb"><img src="resources/Cross-Flow Turbine.png" alt="10KW crossflow turbine prototype"></div>
         <h4>10 kW Crossflow Turbine</h4>
         <p>Complete hydraulic dimensioning and structural design of a 10 kW crossflow turbine sized for deployment on Kenyan rivers — covering runner geometry, nozzle sizing, and casing structural analysis.</p>
         <div class="tags"><span>Hydraulic Design</span><span>Structural Analysis</span><span>CAD</span></div>
       </div>
-      <div class="card">
+      <div class="card" data-category="energy">
         <div class="thumb"><img src="resources/BiogasEngine.png" alt="Biogas generator conversion prototype"></div>
         <h4>Biogas Generator Conversion</h4>
         <p>Mechanical conversion of a gasoline engine into a 4 kW biogas-fueled power generation system, addressing fuel delivery, compression ratio, and combustion chamber modifications for biogas operation.</p>
         <div class="tags"><span>Combustion Systems</span><span>Mechanical Conversion</span></div>
         <span class="status"><span class="led"></span>In progress</span>
       </div>
-      <div class="card">
+      <div class="card" data-category="energy">
         <div class="thumb"><img src="resources/Briqutte.png" alt="Enriched biomass briquettes prototype"></div>
         <h4>Enriched Biomass Briquettes</h4>
         <p>Experimental research analyzing combustion kinetics and thermal dynamics of enriched biomass briquettes, using OriginPro for data analysis and curve fitting.</p>
@@ -149,14 +156,14 @@
       <div class="rule"></div>
     </div>
     <div class="grid">
-      <div class="card">
+      <div class="card" data-category="sustainable">
         <div class="thumb"><img src="resources/ReBlock.png" alt="Recycling Extruder prototype"></div>
         <h4>Re-Block Extruder</h4>
         <p>Project proposal for an extruder machine that produces paving blocks from recycled plastic and sand, targeting plastic-waste reduction and low-cost construction material production.</p>
         <div class="tags"><span>CAD</span><span>Recycling</span><span>Product Design</span></div>
         <span class="status"><span class="led"></span>Proposal Stage</span>
       </div>
-      <div class="card">
+      <div class="card" data-category="sustainable">
         <div class="thumb"><img src="resources/Maize cob crusher.png" alt="Maize cob crusher prototype"></div>
         <h4>Maize Cob Crusher &amp; Compactor</h4>
         <p>Designed a maize cob crusher and compactor to process crop residue into a densified, usable output, sizing the crushing mechanism and compaction chamber for the required throughput and structural load.</p>
@@ -170,13 +177,13 @@
       <div class="rule"></div>
     </div>
     <div class="grid">
-      <div class="card">
+      <div class="card" data-category="simulation">
         <div class="thumb"><img src="resources/Reducer gearbox .png" alt="Reducer gearbox prototype"></div>
         <h4>7:1 Speed Reducer Gearbox</h4>
         <p>Designed a 7:1 speed-reduction gearbox using a compound reverted helical geartrain, sizing gear ratios, module, and face width for the required torque and speed reduction. Verified gear tooth stress and shaft deflection through simulation, alongside bearing selection and shaft layout for the coaxial (reverted) configuration.</p>
         <div class="tags"><span>Gear Train Design</span><span>FEA</span><span>Shaft Design</span></div>
       </div>
-      <div class="card">
+      <div class="card" data-category="simulation">
         <div class="thumb thumb-video" data-video="resources/videos/Leg.mp4">
           <img src="resources/videos/Prosthetic leg.png" alt="Prosthetic leg design video preview">
           <span class="play-btn"><i class="fa-solid fa-play"></i></span>
@@ -185,7 +192,7 @@
         <p>Designed a lower-limb prosthetic leg, modeling the socket, pylon, and joint assembly in CAD and evaluating structural strength under simulated gait loading to balance durability with weight.</p>
         <div class="tags"><span>Biomechanical Design</span><span>FEA</span><span>CAD</span></div>
       </div>
-      <div class="card">
+      <div class="card" data-category="simulation">
         <div class="thumb thumb-video" data-video="resources/videos/Tank simulation.mp4">
           <img src="resources/videos/Tank simulation.png" alt="Tank flow simulation video preview">
           <span class="play-btn"><i class="fa-solid fa-play"></i></span>
@@ -194,7 +201,7 @@
         <p>Modeled a process tank in SolidWorks and ran Flow Simulation to evaluate internal flow patterns, velocity distribution, and pressure drop, using the results to inform inlet/outlet placement and internal geometry.</p>
         <div class="tags"><span>CFD</span><span>SolidWorks Flow Simulation</span><span>Fluid Dynamics</span></div>
       </div>
-      <div class="card">
+      <div class="card" data-category="simulation">
         <div class="thumb"><img src="resources/Heat sink.png" alt="Heat sink simulation snippet"></div>
         <h4>Heat Sink Simulation</h4>
         <p>Simulated the thermal performance of a heat sink design, analyzing fin geometry and airflow to evaluate heat dissipation and surface temperature distribution under a defined thermal load.</p>

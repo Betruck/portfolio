@@ -84,3 +84,19 @@ filterButtons.forEach(btn => {
     });
   });
 });
+
+const scrollSections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+function setActiveNav() {
+  let current = '';
+  scrollSections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 120) current = section.id;
+  });
+  navAnchors.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+  });
+}
+
+window.addEventListener('scroll', setActiveNav);
+setActiveNav();

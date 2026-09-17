@@ -843,3 +843,5 @@ a:focus-visible, button:focus-visible{
 .filter-btn:hover{border-color:var(--accent);color:var(--text);}
 .filter-btn.active{background:var(--accent);color:#FFF449;border-color:var(--accent);}
 .card.hidden, .grid.hidden, .subsection-head.hidden{display:none;}
+
+.nav-links a.active{color:var(--accent);}

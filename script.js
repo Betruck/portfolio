@@ -34,7 +34,7 @@ document.addEventListener('keydown', (e) => {
 
 // Scroll-triggered reveal animations
 const revealTargets = document.querySelectorAll(
-  '.card, .timeline-item, .skill-category, .cyber-card, .edu-list li, .section-head'
+  '.card, .timeline-item, .skill-category, .software-card, .beyond-note, .edu-list li, .section-head'
 );
 revealTargets.forEach(el => el.classList.add('reveal'));
 

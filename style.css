@@ -845,3 +845,35 @@ a:focus-visible, button:focus-visible{
 .card.hidden, .grid.hidden, .subsection-head.hidden{display:none;}
 
 .nav-links a.active{color:var(--accent);}
+
+.software-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:1.25rem;
+  margin-bottom:2rem;
+}
+.software-card{
+  border:1px solid var(--line);
+  background:var(--bg-alt);
+  padding:1.5rem;
+  border-radius:6px;
+  transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.software-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+  box-shadow:0 8px 24px rgba(0,0,0,0.25);
+}
+.software-icon{
+  width:48px;height:48px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);
+  border-radius:50%;
+  margin-bottom:1rem;
+  font-size:1.2rem;
+  color:var(--accent);
+  transition:background .25s ease, color .25s ease;
+}
+.software-card:hover .software-icon{background:var(--accent);color:#7AE2CF;}
+.software-card h3{font-family:var(--display);font-size:1.05rem;margin-bottom:.5rem;color:var(--text);}
+.software-card p{font-size:.85rem;color:var(--muted);line-height:1.5;margin:0;}

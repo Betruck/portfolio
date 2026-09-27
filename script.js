@@ -100,3 +100,48 @@ function setActiveNav() {
 
 window.addEventListener('scroll', setActiveNav);
 setActiveNav();
+
+// Project detail modal
+const projectModal = document.getElementById('project-modal');
+const modalMedia = document.getElementById('project-modal-media');
+const modalCategory = document.getElementById('project-modal-category');
+const modalTitle = document.getElementById('project-modal-title');
+const modalTags = document.getElementById('project-modal-tags');
+const modalSummary = document.getElementById('project-modal-summary');
+const modalExtra = document.getElementById('project-modal-extra');
+const modalClose = document.getElementById('project-modal-close');
+
+document.querySelectorAll('[data-project-btn]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.card');
+    const grid = card.closest('.grid');
+    const subHead = grid.previousElementSibling;
+    const category = subHead && subHead.querySelector('h3') ? subHead.querySelector('h3').textContent : '';
+
+    const thumb = card.querySelector('.thumb');
+    const videoSrc = thumb ? thumb.dataset.video : null;
+    modalMedia.innerHTML = videoSrc ? `<video controls src="${videoSrc}"></video>` : (thumb ? thumb.innerHTML : '');
+
+    modalCategory.textContent = category;
+    modalTitle.textContent = card.querySelector('h4').textContent;
+    modalTags.innerHTML = card.querySelector('.tags') ? card.querySelector('.tags').innerHTML : '';
+    modalSummary.innerHTML = `<p>${card.querySelector('p').innerHTML}</p>`;
+
+    const extra = card.querySelector('.project-detail');
+    modalExtra.innerHTML = extra ? extra.innerHTML : '';
+
+    projectModal.classList.add('active');
+  });
+});
+
+function closeProjectModal() {
+  projectModal.classList.remove('active');
+  modalMedia.innerHTML = '';
+}
+modalClose.addEventListener('click', closeProjectModal);
+projectModal.addEventListener('click', (e) => {
+  if (e.target === projectModal) closeProjectModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeProjectModal();
+});

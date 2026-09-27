@@ -41,7 +41,7 @@
   <div class="container hero-grid">
     <div>
       <h1>Mechanical engineer,<br>engineered for <span class="accent">performance</span><br>under real-world load.</h1>
-      <p class="hero-sub">SolidWorks CSWP/CSWA/CSWA-S || CFD &amp; FEA on Ansys || CNC Machining || Thermofluid Systems</p>
+      <p class="hero-sub">SolidWorks CSWP/CSWA/CSWA-S/CSWA-AM/CSWA-SD || CFD &amp; FEA on Ansys || CNC/Conventional Machining || Thermofluid Systems</p>
       <p class="lead">I design, simulate, and manufacture mechanical systems - from hydraulic turbines to biogas power conversions - grounded in structural mechanics, computational fluid dynamics, and hands-on fabrication. Ranked Best Student in Mechanical Engineering for three consecutive years at Dedan Kimathi University of Technology, and a Certified SOLIDWORKS Professional (CSWP).</p>
       <div class="hero-buttons">
         <a href="#projects" class="btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
@@ -101,6 +101,18 @@
           </div>
         </li>
         <li>
+          <span class="yr">Sep 2026</span>
+          <div><strong>Certified SOLIDWORKS Additive Manufacturing Associate (CSWA-AM)</strong><span class="sub">Dassault Systèmes</span>
+            <a class="cert-link" href="resources/certifications/Certificate CSWA-AM.pdf" target="_blank" rel="noopener">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </li>
+        <li>
+          <span class="yr">Sep 2026</span>
+          <div><strong>Certified SOLIDWORKS Sustainability Associate (CSWA-SD)</strong><span class="sub">Dassault Systèmes</span>
+            <a class="cert-link" href="resources/certifications/Certificate CSWA-SD.pdf" target="_blank" rel="noopener">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </li>
+        <li>
           <span class="yr">2024</span>
           <div><strong>Software & Web Development</strong><span class="sub">Power Learn Project · May–Sep 2024</span>
             <a class="cert-link" href="resources/certifications/plp.pdf" target="_blank" rel="noopener">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -138,24 +150,60 @@
     </div>
     <div class="grid">
       <div class="card" data-category="energy">
-        <div class="thumb"><img src="resources/Cross-Flow Turbine.png" alt="10KW crossflow turbine prototype"></div>
+        <div class="thumb"><img src="resources/Cross-Flow Turbine.png" alt="10kW Michell-Banki crossflow turbine design"></div>
         <h4>10 kW Crossflow Turbine</h4>
-        <p>Complete hydraulic dimensioning and structural design of a 10 kW crossflow turbine sized for deployment on Kenyan rivers — covering runner geometry, nozzle sizing, and casing structural analysis.</p>
+        <p>Led runner sizing and overall design of a 10 kW Michell-Banki crossflow turbine for off-grid rural electrification, developed with a 3-member team and selected over Pelton/Kaplan designs for its self-cleaning, low-head performance.</p>
         <div class="tags"><span>Hydraulic Design</span><span>Structural Analysis</span><span>CAD</span></div>
+        <span class="status"><span class="led"></span>Design Proposal</span>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p><strong>My role:</strong> Led runner sizing and the overall turbine design within a 3-member team, covering the hydraulic and geometric calculations that defined the rest of the system.</p>
+          <p><strong>Problem:</strong> Rural communities near small rivers often have real hydraulic potential but rely on diesel generators or biomass, since most turbine technologies are too costly or unsuited to low-head, silt-heavy conditions.</p>
+          <p><strong>Why crossflow:</strong> Compared against Pelton (needs >50 m head — impractical for rural sites) and Kaplan (high efficiency but complex, precision-dependent, and cavitation-prone), the crossflow topology was selected for its low-to-medium head range, basic local maintainability, and low cost.</p>
+          <ul>
+            <li><strong>Hydraulic sizing</strong> — power availability calculated from P = ρ·g·Q·H, with runner outer/inner diameter derived from the target rotational speed and standard diameter ratio.</li>
+            <li><strong>Blade geometry</strong> — jet attack angle α = 16°, giving a blade angle β₁ ≈ 30°, per standard crossflow design relations.</li>
+            <li><strong>Runner fabrication</strong> — 20 blades formed by longitudinally cutting schedule-40 stainless steel pipe (4-inch diameter) into quarter-pipe segments, keeping fabrication local and low-cost.</li>
+            <li><strong>Power transmission</strong> — belt-and-pulley drive matching the turbine's low rotational speed to a 10 kW alternator running at 1500 RPM.</li>
+          </ul>
+          <p><strong>Status:</strong> Design and analysis complete as a Machine Design course proposal; physical fabrication is the next planned phase.</p>
+        </div>
       </div>
       <div class="card" data-category="energy">
         <div class="thumb"><img src="resources/BiogasEngine.png" alt="Biogas generator conversion prototype"></div>
         <h4>Biogas Generator Conversion</h4>
-        <p>Mechanical conversion of a gasoline engine into a 4 kW biogas-fueled power generation system, addressing fuel delivery, compression ratio, and combustion chamber modifications for biogas operation.</p>
+        <p>Converted a gasoline engine to run on biogas for 5 kW power generation, redesigning the fuel-air mixing system, ignition timing, and compression ratio for stable combustion.</p>
         <div class="tags"><span>Combustion Systems</span><span>Mechanical Conversion</span></div>
         <span class="status"><span class="led"></span>In progress</span>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p><strong>Conversion approach:</strong> Adapted a standard gasoline engine to run on biogas by replacing the carburetor with a gas-mixing (venturi-type) valve suited to biogas's lower calorific value and slower flame speed.</p>
+          <ul>
+            <li><strong>Ignition timing</strong> — advanced to compensate for methane's slower combustion rate relative to gasoline.</li>
+            <li><strong>Compression ratio</strong> — evaluated against the engine's baseline setting to balance knock resistance with achievable power output.</li>
+            <li><strong>Fuel delivery</strong> — sized the mixer and intake path for biogas's lower energy density, accounting for the power derating typical of gasoline-to-biogas conversions.</li>
+            <li><strong>Target output</strong> — 5 kW continuous power generation from the converted unit.</li>
+          </ul>
+        </div>
       </div>
       <div class="card" data-category="energy">
-        <div class="thumb"><img src="resources/Briqutte.png" alt="Enriched biomass briquettes prototype"></div>
-        <h4>Enriched Biomass Briquettes</h4>
-        <p>Experimental research analyzing combustion kinetics and thermal dynamics of enriched biomass briquettes, using OriginPro for data analysis and curve fitting.</p>
-        <div class="tags"><span>Combustion Kinetics</span><span>OriginPro</span><span>Thermal Analysis</span></div>
+        <div class="thumb"><img src="resources/Briqutte.png" alt="Carbonized coffee husk briquettes prototype"></div>
+        <h4>Carbonized Coffee Husk Briquettes</h4>
+        <p>Developing carbonized briquettes from coffee husk waste as a renewable, eco-friendly alternative to wood charcoal — reducing deforestation while turning an abundant coffee-processing byproduct into usable cooking fuel.</p>
+        <div class="tags"><span>Waste-to-Energy</span><span>Combustion Kinetics</span><span>OriginPro</span></div>
         <span class="status"><span class="led"></span>In progress</span>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p><strong>Problem:</strong> Kenya's reliance on wood charcoal for household cooking drives deforestation and emissions, while coffee husks — a large-volume processing byproduct — are largely discarded rather than reused.</p>
+          <p><strong>Approach:</strong> Coffee husks are carbonized and formed into briquettes with a suitable binder using a fabricated briquetting machine, then evaluated against key fuel-performance properties:</p>
+          <ul>
+            <li>Calorific value</li>
+            <li>Moisture and ash content</li>
+            <li>Ignition time and burning rate</li>
+            <li>Combustion duration, benchmarked against traditional wood charcoal</li>
+          </ul>
+          <p><strong>Goal:</strong> A durable, energy-saving briquette that cuts agricultural waste and reduces reliance on charcoal from wood, supporting renewable energy and sustainable use of agricultural residues.</p>
+        </div>
       </div>
     </div>
 
@@ -166,17 +214,36 @@
     </div>
     <div class="grid">
       <div class="card" data-category="sustainable">
-        <div class="thumb"><img src="resources/ReBlock.png" alt="Recycling Extruder prototype"></div>
+        <div class="thumb"><img src="resources/ReBlock.png" alt="Re-Block interlocking paving tile prototype"></div>
         <h4>Re-Block Extruder</h4>
-        <p>Project proposal for an extruder machine that produces paving blocks from recycled plastic and sand, targeting plastic-waste reduction and low-cost construction material production.</p>
+        <p>A thermochemical extrusion system converting recycled LDPE plastic and river sand into interlocking paving tiles — a lighter, more durable, and more cost-effective alternative to concrete "cabro" blocks.</p>
         <div class="tags"><span>CAD</span><span>Recycling</span><span>Product Design</span></div>
         <span class="status"><span class="led"></span>Proposal Stage</span>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p><strong>Concept:</strong> Re-Block addresses two problems at once — Kenya's growing plastic waste crisis and the structural shortcomings of traditional concrete masonry — by converting recycled LDPE and sand into interlocking tiles via a proprietary extrusion process operating at 180–220°C.</p>
+          <ul>
+            <li><strong>Structural performance</strong> — 35 MPa compressive strength, meeting industrial load-bearing standards.</li>
+            <li><strong>Durability</strong> — near-zero water absorption, preventing the cracking, moss growth, and salt dampness common in concrete.</li>
+            <li><strong>Logistics</strong> — 25% lighter than concrete equivalents, enabling higher transport payloads and faster, mortar-less installation.</li>
+            <li><strong>Geometry</strong> — a specialized "S-Curve" interlocking profile for structural stability under heavy vehicle traffic.</li>
+          </ul>
+        </div>
       </div>
       <div class="card" data-category="sustainable">
         <div class="thumb"><img src="resources/Maize cob crusher.png" alt="Maize cob crusher prototype"></div>
         <h4>Maize Cob Crusher &amp; Compactor</h4>
         <p>Designed a maize cob crusher and compactor to process crop residue into a densified, usable output, sizing the crushing mechanism and compaction chamber for the required throughput and structural load.</p>
         <div class="tags"><span>Machine Design</span><span>Agro-Processing</span><span>CAD</span></div>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p><strong>Design approach:</strong> Sized a rotor-based crushing mechanism to break down maize cobs before compacting the residue into a denser, more usable output — commonly repurposed as livestock feed or briquette feedstock.</p>
+          <ul>
+            <li><strong>Crushing stage</strong> — hammer/blade rotor sized for the required cob throughput and drive torque.</li>
+            <li><strong>Compaction stage</strong> — chamber sized to densify crushed material into a compact, transportable form.</li>
+            <li><strong>Structural frame</strong> — designed to handle combined crushing and compaction loads within a practical cost budget for on-farm use.</li>
+          </ul>
+        </div>
       </div>  
     </div>
 
@@ -188,9 +255,20 @@
     <div class="grid">
       <div class="card" data-category="simulation">
         <div class="thumb"><img src="resources/Reducer gearbox .png" alt="Reducer gearbox prototype"></div>
-        <h4>7:1 Speed Reducer Gearbox</h4>
-        <p>Designed a 7:1 speed-reduction gearbox using a compound reverted helical geartrain, sizing gear ratios, module, and face width for the required torque and speed reduction. Verified gear tooth stress and shaft deflection through simulation, alongside bearing selection and shaft layout for the coaxial (reverted) configuration.</p>
+        <h4>7.74:1 Speed Reducer Gearbox</h4>
+        <p>Designed a 7.74:1 compound reverted helical gearbox for a 78.5 kW drive, validated through AGMA gear-stress and shaft-fatigue analysis in SolidWorks.</p>
         <div class="tags"><span>Gear Train Design</span><span>FEA</span><span>Shaft Design</span></div>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p><strong>Brief:</strong> 78.5 kW drive, reducing 1200 rpm input to 155 rpm output — a 7.7419:1 ratio — at a minimum Factor of Safety of 2.0, 20,000-hour service life, and 95% reliability.</p>
+          <ul>
+            <li><strong>Kinematic synthesis</strong> — split the ratio across two gear stages in a compound reverted layout, solving tooth counts (20 / 75 / 31 / 64) to satisfy the coaxial center-distance constraint (295 mm).</li>
+            <li><strong>AGMA gear stress analysis</strong> — verified bending and contact stress on every mesh, factoring in dynamic, load-distribution, and overload effects.</li>
+            <li><strong>Shaft design &amp; fatigue analysis</strong> — sized the input, intermediate, and output shafts (AISI 1050 CD) against combined bending/torsional fatigue, achieving FOS 2.04–2.45 across all three.</li>
+            <li><strong>Bearing selection</strong> — thrust roller bearings sized for a 20,000-hour L10 life.</li>
+            <li><strong>CAD verification</strong> — modeled the full assembly in SolidWorks, including a cast-iron housing sized for manufacturability.</li>
+          </ul>
+        </div>
       </div>
       <div class="card" data-category="simulation">
         <div class="thumb thumb-video" data-video="resources/videos/Leg.mp4">
@@ -200,6 +278,15 @@
         <h4>Prosthetic Leg Design</h4>
         <p>Designed a lower-limb prosthetic leg, modeling the socket, pylon, and joint assembly in CAD and evaluating structural strength under simulated gait loading to balance durability with weight.</p>
         <div class="tags"><span>Biomechanical Design</span><span>FEA</span><span>CAD</span></div>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p>Lower-limb prostheses are built around three core elements — a custom socket, a structural pylon, and articulating joint components — with alignment between them being the single biggest factor in comfort, stability, and gait efficiency.</p>
+          <ul>
+            <li><strong>Socket design</strong> — modeled to closely match residual-limb geometry, since fit quality directly affects load distribution and wearer comfort.</li>
+            <li><strong>Alignment</strong> — socket, pylon, and foot positioned to support a natural gait through heel strike, stance, and toe-off, balancing stability against mobility.</li>
+            <li><strong>Structural validation</strong> — modeled under simulated gait loading to verify the assembly can withstand cyclic stance-phase forces without failure, in line with standard lower-limb prosthetic testing principles.</li>
+          </ul>
+        </div>
       </div>
       <div class="card" data-category="simulation">
         <div class="thumb thumb-video" data-video="resources/videos/Tank simulation.mp4">
@@ -207,14 +294,34 @@
           <span class="play-btn"><i class="fa-solid fa-play"></i></span>
         </div>
         <h4>Flow Simulation in a Designed Tank</h4>
-        <p>Modeled a process tank in SolidWorks and ran Flow Simulation to evaluate internal flow patterns, velocity distribution, and pressure drop, using the results to inform inlet/outlet placement and internal geometry.</p>
+        <p>Modeled a process tank in SolidWorks and ran Flow Simulation to evaluate internal flow patterns, velocity distribution, and pressure drop.</p>
         <div class="tags"><span>CFD</span><span>SolidWorks Flow Simulation</span><span>Fluid Dynamics</span></div>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p>Internal flow behavior was evaluated using SolidWorks Flow Simulation's finite-volume CFD solver, which meshes the actual fluid volume inside the tank rather than the solid geometry.</p>
+          <ul>
+            <li><strong>Turbulence modeling</strong> — resolved via SolidWorks' built-in k-ε model, standard for internal flow at typical process-tank Reynolds numbers.</li>
+            <li><strong>Boundary conditions</strong> — inlet flow rate/velocity and outlet pressure defined to represent real operating conditions.</li>
+            <li><strong>Outputs analyzed</strong> — velocity distribution, pressure drop, and flow trajectory, used to assess dead zones and mixing behavior.</li>
+            <li><strong>Design feedback loop</strong> — results informed inlet/outlet placement and internal geometry to improve flow uniformity.</li>
+          </ul>
+        </div>
       </div>
       <div class="card" data-category="simulation">
         <div class="thumb"><img src="resources/Heat sink.png" alt="Heat sink simulation snippet"></div>
         <h4>Heat Sink Simulation</h4>
         <p>Simulated the thermal performance of a heat sink design, analyzing fin geometry and airflow to evaluate heat dissipation and surface temperature distribution under a defined thermal load.</p>
         <div class="tags"><span>Thermal Analysis</span><span>Heat Transfer</span><span>CFD/FEA</span></div>
+        <button class="view-details-btn" data-project-btn>View Details <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="project-detail" hidden>
+          <p>Thermal performance was evaluated by simulating conduction through the heat sink body and convective heat loss from the fin surfaces, a standard approach for electronics-cooling design in SolidWorks.</p>
+          <ul>
+            <li><strong>Material selection</strong> — trade-off between aluminum (lighter, lower cost) and copper (higher thermal conductivity, heavier) evaluated for the application.</li>
+            <li><strong>Fin geometry</strong> — height, thickness, and spacing sized to maximize surface area while keeping airflow resistance manageable.</li>
+            <li><strong>Convection mode</strong> — analyzed under natural convection, where fin spacing must be wider than in forced-air designs to avoid restricting buoyancy-driven airflow.</li>
+            <li><strong>Output</strong> — temperature distribution across the base and fins, used to identify hotspots and verify the design meets the target thermal load.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -406,6 +513,20 @@
   <div class="video-lightbox-inner">
     <button class="video-lightbox-close" id="video-lightbox-close" aria-label="Close video">&times;</button>
     <video id="video-lightbox-player" controls></video>
+  </div>
+</div>
+
+<div class="project-modal" id="project-modal">
+  <div class="project-modal-inner">
+    <button class="project-modal-close" id="project-modal-close" aria-label="Close project details">&times;</button>
+    <div class="project-modal-media" id="project-modal-media"></div>
+    <div class="project-modal-body">
+      <span class="project-modal-category" id="project-modal-category"></span>
+      <h2 id="project-modal-title"></h2>
+      <div class="project-modal-tags" id="project-modal-tags"></div>
+      <div class="project-modal-summary" id="project-modal-summary"></div>
+      <div class="project-modal-extra" id="project-modal-extra"></div>
+    </div>
   </div>
 </div>
 <script src="script.js"></script>
